@@ -1,0 +1,37 @@
+.diagram {
+    padding: 30px;
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid #ccc;
+    margin: 30px;
+    text-align: center;
+}
+
+.imageleft, 
+.imageright {
+    width: 300px;
+    height: 80px;
+    // padding: 0px;
+    background: lightblue;
+    position: absolute;
+    top: 70px;
+}
+
+.imageleft {
+    left: 200px;
+}
+
+.imageright {
+    right: 200px;
+}

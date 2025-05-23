@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 0 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    span {
+        margin: 0 10px;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: lightblue;
+        }
+    }
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    background: lightblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
