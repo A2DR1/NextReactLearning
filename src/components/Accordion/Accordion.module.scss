@@ -1,0 +1,28 @@
+.accordionItem {
+    cursor: pointer;
+    width: 100%;
+    // &:hover {
+
+    // }
+}
+
+.accordion {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // width: 100%;
+    // margin: auto; 
+    // text-align: center;
+    padding: 10px;
+}
+
+.title {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.content {
+    background-color: lightblue;
+    padding: 10px;
+}
