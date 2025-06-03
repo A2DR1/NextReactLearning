@@ -1,23 +1,25 @@
 import styles from './Products.module.scss';
 import { Image } from 'antd'; 
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { Typography } from 'antd';
 import { set } from 'rc-util';
 const { Paragraph } = Typography;
 
-const products = [
-    { id: 1, name: 'Product 1', price: 100, desc: 'This is product 1', image: '/assets/images/cat2.jpg'},
-    { id: 2, name: 'Product 2', price: 200, desc: 'This is product 2', image: '/assets/images/cat2.jpg'},
-    { id: 3, name: 'Product 3', price: 300, desc: 'This is product 3', image: '/assets/images/cat2.jpg'},
-    { id: 4, name: 'Product 4', price: 400, desc: 'This is product 4', image: '/assets/images/cat2.jpg'},
-    { id: 5, name: 'Product 5', price: 500, desc: 'This is product 5', image: '/assets/images/cat2.jpg'},
-];
+// const products = [
+//     { id: 1, name: 'Product 1', price: 100, desc: 'This is product 1', image: '/assets/images/cat2.jpg'},
+//     { id: 2, name: 'Product 2', price: 200, desc: 'This is product 2', image: '/assets/images/cat2.jpg'},
+//     { id: 3, name: 'Product 3', price: 300, desc: 'This is product 3', image: '/assets/images/cat2.jpg'},
+//     { id: 4, name: 'Product 4', price: 400, desc: 'This is product 4', image: '/assets/images/cat2.jpg'},
+//     { id: 5, name: 'Product 5', price: 500, desc: 'This is product 5', image: '/assets/images/cat2.jpg'},
+// ];
 
 const Products = ( {setProduct} ) => {
-    const [productsShow, setProductsShow] = useState(products.slice(0, 3));
+    const [products, setProducts] = useState([]);
+    const [productsShow, setProductsShow] = useState([]);
     const [showLeft, setShowLeft] = useState(false);
     const [showRight, setShowRight] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const clickLeft = () => {
         setShowRight(true);
@@ -41,9 +43,23 @@ const Products = ( {setProduct} ) => {
     }
 
     useEffect(() => {
-        setProductsShow(products.slice(0, 3));
-        setProduct(products[0]);
+        setLoading(true);
+        fetch('http://localhost:4000/products')
+            .then((response) => response.json())
+            .then((json) => {
+                setLoading(false);
+                console.log(json);
+                setProducts(json);
+                setProductsShow(json.slice(0, 3));
+                setProduct(json[0]);
+
+            })
     }, [])
+
+    // useEffect(() => {
+    //     setProductsShow(products.slice(0, 3));
+    //     setProduct(products[0]);
+    // }, [])
 
     return (
         <div className={styles.products}>
@@ -52,14 +68,14 @@ const Products = ( {setProduct} ) => {
                 style={{opacity: showLeft ? 1 : 0}}>
                 <LeftOutlined style={{fontSize: '30px'}}/>
             </div>
-            {productsShow.map((product)=> {
+            {!loading && productsShow.map((product)=> {
                 return (
                     <div 
-                        key={product.id} className={styles.product}
+                        key={product._id} className={styles.product}
                         onClick={() => setProduct(product)} >
                         <Paragraph>{product.name}</Paragraph>
                         <Image 
-                            src={product.image}
+                            src={product.img}
                             alt={product.name}
                             width={200}
                             preview={false}

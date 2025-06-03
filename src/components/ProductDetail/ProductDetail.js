@@ -4,12 +4,12 @@ import { Typography, Image } from 'antd';
 const {Title, Paragraph} = Typography;
 
 const ProductDetail = ( {product} ) => {
-    const { id, name, price, desc, image } = product;
+    const { id, name, price, desc, img } = product;
     return (
         <div className={styles.productDetail}>
             <Image 
-                width={200}
-                src={image}
+                width={500}
+                src={img}
                 alt={name}/>
                 <div className={styles.productDetailText}>
                     <Title>{name}</Title>
