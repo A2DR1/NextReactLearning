@@ -1,9 +1,6 @@
 import Layout from '@/components/Layout';
-import { Typography } from 'antd';
 import ContactForm from '@/components/ContactForm';
 import GoogleMap from '@/components/GoogleMap';
-
-const { Title } = Typography;
 
 const ContactPage = () => {
     return (

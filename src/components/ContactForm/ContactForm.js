@@ -1,3 +1,4 @@
+import { set } from 'rc-util';
 import styles from './ContactForm.module.scss';
 import { useState } from 'react';
 
@@ -50,25 +51,59 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         // TODO: Add form submission logic
-        alert('Form submitted');
+        console.log('Form submitted with values:', {
+            name,
+            email,
+            phone,
+            subject
+        });
+
+        fetch('http://localhost:4000/messages', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                phone,
+                subject
+            })
+        }
+        ).then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            console.log('Success:', data);
+            setName('');
+            setEmail('');
+            setPhone('');
+            setSubject('');
+            alert('Form submitted');
+        }).catch(error => {
+            console.error('Error:', error);
+        }
+        )
     }
-    
+
 
     return (
         <div className={styles.contactForm}>
             <div className={styles.form}>
                 <div className={styles.userInfo}>
                     <input type="text" placeholder="Name" value={name}
-                        onChange={handleNameChange}/>
+                        onChange={handleNameChange} />
                     <input type="email" placeholder="Email" value={email}
                         onChange={handleEmailChange}
-                        onBlur={validateEmail}/>
+                        onBlur={validateEmail} />
                     <input type="tel" placeholder="Phone" value={phone}
-                        onChange={handlePhoneChange}/>
+                        onChange={handlePhoneChange} />
                 </div>
                 <div className={styles.message}>
                     <textarea placeholder="Subject" value={subject}
-                        onChange={handleSubjectChange}/>
+                        onChange={handleSubjectChange} />
                 </div>
 
             </div>
