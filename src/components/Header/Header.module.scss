@@ -30,3 +30,26 @@
     align-items: center;
 
 }
+
+.searchInput {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+    display: flex;;
+
+    input {
+        width: 60vw;
+        height: 40px;
+        padding: 10px;
+        font-size: 25px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+}
+
+.searchIcon {
+    cursor: pointer;
+}

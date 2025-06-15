@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import ImageText from "@/components/ImageText";
 import Diagram from "@/components/Diagram";
+import Layout from "@/components/Layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ const imageTextContent = {
 export default function Home() {
   return (
     <>
-      <Header />
+      <Layout>
         <div>
           <Banner bannerContent={bannerTop}/>
           <hr />
@@ -42,7 +43,7 @@ export default function Home() {
           <hr />
           <Diagram />
         </div>
-      <Footer />
+      </Layout>
     </>
   );
 }
