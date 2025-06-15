@@ -14,7 +14,7 @@ const UpdateProduct = () => {
     const [form] = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('http://serverlearning-1.onrender.com/products')
         .then(response => response.json())
         .then(json => {
             console.log('Success:', json);
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
     , [selectedProduct, form]);
 
     const fetchProducts = () => {
-        fetch('http://localhost:4000/products')
+        fetch('http://serverlearning-1.onrender.com/products')
         .then(response => response.json())
         .then(json => {
             console.log('Success:', json);
@@ -64,7 +64,7 @@ const UpdateProduct = () => {
         console.log(values.productname, values.price, values.desc, values.tag, values.img);
         
         // send request
-        fetch(`http://localhost:4000/products/${selectedProduct._id}`, {
+        fetch(`http://serverlearning-1.onrender.com/products/${selectedProduct._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

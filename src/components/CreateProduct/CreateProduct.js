@@ -10,7 +10,7 @@ const CreateProduct = () => {
         console.log(productname, price, desc, tag, img);
 
         // send request
-        fetch('http://localhost:4000/products', {
+        fetch('http://serverlearning-1.onrender.com/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

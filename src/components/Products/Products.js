@@ -95,7 +95,7 @@ const Products = ({ setProduct }) => {
             setSearchKeyword(sessionStorage.getItem('searchKeyword'));
             return;
         }
-        fetch('http://localhost:4000/products')
+        fetch('http://serverlearning-1.onrender.com/products')
             .then((response) => response.json())
             .then((json) => {
                 setLoading(false);

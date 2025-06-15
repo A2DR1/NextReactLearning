@@ -58,7 +58,7 @@ const ContactForm = () => {
             subject
         });
 
-        fetch('http://localhost:4000/messages', {
+        fetch('http://serverlearning-1.onrender.com/messages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

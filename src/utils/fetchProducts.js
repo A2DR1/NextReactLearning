@@ -1,7 +1,7 @@
 const fetchProducts = async (keyword, router) => {
     // handle search 
     if (!!keyword && keyword.length > 2) {
-        fetch(`http://localhost:4000/products/search?keyword=${keyword}`)
+        fetch(`http://serverlearning-1.onrender.com/products/search?keyword=${keyword}`)
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
