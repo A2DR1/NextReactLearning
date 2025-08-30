@@ -23,23 +23,13 @@ const Header = () => {
 
     const items = [
         {
-            label: 'Home',
+            label: 'Introduction',
             key: '1',
             children: ''
         },
         {
-            label: 'Products',
+            label: 'AI Chat',
             key: '2',
-            children: ''
-        },
-        {
-            label: 'Support',
-            key: '3',
-            children: ''
-        },
-        {
-            label: 'Contact',
-            key: '4',
             children: ''
         }
     ]
@@ -63,15 +53,15 @@ const Header = () => {
 
     return (
         <div className={styles.header}>
-            <div className={styles.logo}>Logo</div>
+            <div className={styles.logo}>
+                <img src="/assets/images/logo.png" alt="Austin Shen Logo" />
+            </div>
 
             <div className={styles.nav}>
                 <Tabs
                     defaultActiveKey={
                         router.pathname === '/' ? '1' :
-                            router.pathname === '/products' ? '2' :
-                                router.pathname === '/support' ? '3' :
-                                    router.pathname === '/contact' ? '4' : '1'
+                            router.pathname === '/ai-chat' ? '2' : '1'
                     }
                     centered
                     items={items}
@@ -81,22 +71,17 @@ const Header = () => {
                                 router.push('/');
                                 break;
                             case '2':
-                                router.push('/products');
-                                break;
-                            case '3':
-                                router.push('/support');
-                                break;
-                            case '4':
-                                router.push('/contact');
+                                router.push('/ai-chat');
                                 break;
                             default:
                                 break;
                         }
                     }}
                 />
-
             </div>
-            <div ref={ref}>
+
+            <div className={styles.logoPlaceholder}></div>
+            {/* <div ref={ref}>
                 <div onClick={clickSearch}>
                     <SearchOutlined className={styles.searchIcon} />
                 </div>
@@ -104,7 +89,7 @@ const Header = () => {
                     <input value={keyword} onChange={handleChange} onKeyDown={handleKeyDown}></input>
                     <button onClick={() => {fetchProducts(keyword, router)}}>Search</button>
                 </div>
-            </div>
+            </div> */}
 
         </div>
 

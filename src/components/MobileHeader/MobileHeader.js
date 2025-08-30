@@ -31,9 +31,7 @@ const MobileHeader = () => {
                         <div>
                             <div className={styles.menu}>
                                 <div className={styles.nav} onClick={() => { router.push('/') }}>Home</div>
-                                <div className={styles.nav} onClick={() => { router.push('/products') }}>Products</div>
-                                <div className={styles.nav} onClick={() => { router.push('/support') }}>Support</div>
-                                <div className={styles.nav} onClick={() => { router.push('/contact') }}>Contact</div>
+                                <div className={styles.nav} onClick={() => { router.push('/ai-chat') }}>AI Chat</div>
                                 <div className={styles.nav} onClick={() => { setShowSearch(!showSearch) }}>Search <SearchOutlined style={{ fontSize: '16px' }} /></div>
                                 <MenuOutlined className={styles.nav} onClick={() => { setToggleMenu(!toggleMenu) }} style={{ fontSize: '24px', marginRight: '16px' }} />
 

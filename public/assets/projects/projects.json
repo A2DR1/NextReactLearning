@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "AI-Powered Cancer Diagnostics",
+    "description": "Developed a machine learning model for early cancer detection using medical imaging data. Implemented deep learning algorithms with 95% accuracy in identifying malignant cells. The system processes CT scans and MRI images to detect early-stage tumors.",
+    "technologies": ["Python", "TensorFlow", "OpenCV", "Scikit-learn", "Docker", "NumPy", "Pandas"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/cancer-diagnostics",
+    "liveUrl": "https://cancer-demo.vercel.app",
+    "category": "Machine Learning",
+    "year": 2024,
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 2,
+    "title": "Quantum Computing Simulator",
+    "description": "Built a quantum circuit simulator using Lean theorem prover. Implemented quantum gates and algorithms for educational purposes in quantum computing. Features include quantum entanglement visualization and algorithm testing.",
+    "technologies": ["Lean", "Haskell", "Quantum Algorithms", "Mathematics", "Functional Programming", "Type Theory"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/quantum-simulator",
+    "liveUrl": null,
+    "category": "Research",
+    "year": 2024,
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 3,
+    "title": "Full-Stack E-commerce Platform",
+    "description": "Developed a complete e-commerce solution with React Native frontend and Firebase backend. Features include user authentication, product management, shopping cart, payment processing with Stripe, and admin dashboard.",
+    "technologies": ["React Native", "Firebase", "JavaScript", "Node.js", "Stripe", "Redux", "Firestore"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/ecommerce-app",
+    "liveUrl": "https://ecommerce-demo.vercel.app",
+    "category": "Mobile Development",
+    "year": 2023,
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 4,
+    "title": "Robotics Control System",
+    "description": "Designed and implemented a control system for autonomous robotics using ROS and computer vision. Integrated sensor fusion and path planning algorithms for obstacle avoidance and navigation.",
+    "technologies": ["ROS", "Python", "Computer Vision", "OpenCV", "Arduino", "C++", "Linux"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/robotics-control",
+    "liveUrl": null,
+    "category": "Robotics",
+    "year": 2023,
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 5,
+    "title": "Real-time Chat Application",
+    "description": "Built a real-time chat application with WebSocket support, user authentication, and file sharing capabilities. Features include group chats, private messaging, and message encryption.",
+    "technologies": ["React", "Node.js", "Socket.io", "MongoDB", "Express", "JWT", "WebRTC"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/chat-app",
+    "liveUrl": "https://chat-demo.vercel.app",
+    "category": "Web Development",
+    "year": 2023,
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 6,
+    "title": "Data Visualization Dashboard",
+    "description": "Created an interactive dashboard for visualizing complex datasets using D3.js and React. Includes multiple chart types, filtering capabilities, and real-time data updates.",
+    "technologies": ["React", "D3.js", "TypeScript", "Chart.js", "CSS3", "REST API", "JSON"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/data-dashboard",
+    "liveUrl": "https://dashboard-demo.vercel.app",
+    "category": "Data Science",
+    "year": 2023,
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 7,
+    "title": "Blockchain Smart Contracts",
+    "description": "Developed smart contracts for decentralized applications using Solidity and Ethereum. Implemented token contracts, voting systems, and DeFi protocols with security best practices.",
+    "technologies": ["Solidity", "Ethereum", "Web3.js", "Truffle", "Ganache", "MetaMask", "JavaScript"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/blockchain-contracts",
+    "liveUrl": null,
+    "category": "Blockchain",
+    "year": 2022,
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 8,
+    "title": "Computer Vision Game",
+    "description": "Created a gesture-controlled game using computer vision and hand tracking. Players control game elements through hand movements and gestures captured by webcam.",
+    "technologies": ["Python", "OpenCV", "MediaPipe", "Pygame", "NumPy", "Computer Vision", "Game Development"],
+    "image": "/assets/images/cat2.jpg",
+    "githubUrl": "https://github.com/austinshen/vision-game",
+    "liveUrl": null,
+    "category": "Computer Vision",
+    "year": 2022,
+    "difficulty": "Intermediate"
+  }
+]

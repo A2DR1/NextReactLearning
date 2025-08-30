@@ -9,9 +9,9 @@ const ImageText = ( {imageText} ) => {
             <Image 
                 width={400}
                 src={image}
-                alt='cat'  
+                alt='pic'  
                 preview={{
-                    src: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                    src: image,
                   }}/>
             <Banner bannerContent={content} />
         </div>

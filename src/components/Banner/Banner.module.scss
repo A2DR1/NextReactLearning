@@ -3,6 +3,36 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 40px;
+    margin-inline: 40px;
     padding: 30px;
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+        line-height: 1.2;
+    }
+}
+
+.contentSection {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.imageContainer {
+    flex-shrink: 0;
+}
+
+.profileImage {
+    border-radius: 10%;
+    // border: 3px solid #007bff;
+    // object-fit: cover;
+    margin-top: 20px;
+}
+
+.textContent {
+    flex: 1;
 }
