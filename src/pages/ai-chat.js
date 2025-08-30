@@ -190,7 +190,7 @@ const AIChat = () => {
         <div className={styles.header}>
           <Title level={1} className={styles.title}>
             <RobotOutlined className={styles.titleIcon} />
-            Chat with Austin's AI
+            Chat with Austin&apos;s AI
           </Title>
           <Paragraph className={styles.subtitle}>
             Ask me anything about Austin Shen - his background, projects, technologies, and interests!
@@ -236,7 +236,7 @@ const AIChat = () => {
                       className={styles.avatar}
                       style={{ backgroundColor: '#52c41a' }}
                     />
-                    <span className={styles.messageType}>Austin's AI</span>
+                    <span className={styles.messageType}>Austin&apos;s AI</span>
                     <span className={styles.timestamp}>typing...</span>
                   </div>
                   <div className={styles.typingIndicator}>

@@ -18,7 +18,7 @@ const ProjectDetail = () => {
     return (
       <div style={{ padding: '2rem', textAlign: 'center' }}>
         <Title level={2}>Project Not Found</Title>
-        <Paragraph>Sorry, the project you're looking for doesn't exist.</Paragraph>
+        <Paragraph>Sorry, the project you&apos;re looking for doesn&apos;t exist.</Paragraph>
         <Link href="/">
           <Button type="primary" icon={<ArrowLeftOutlined />}>
             Back to Home
